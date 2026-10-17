@@ -9,7 +9,7 @@
 <body>
 <p><strong>Elucidator</strong></p>
 <h1>Privacy Policy</h1>
-<p class="updated">Effective date: October 5, 2026</p>
+<p class="updated">Effective date: October 17, 2026</p>
 <nav id="langnav"
      data-langs='[{"code":"en","label":"English"},{"code":"ja","label":"日本語"}]'
      data-current="en"></nav>
@@ -17,8 +17,10 @@
 <p>This policy explains how the iOS app Elucidator handles data.</p>
 
 <h2>1. On-Device Processing</h2>
-<p>Elucidator analyzes camera images with an AI model on your device and describes the scene in text or speech. It uses the on-device model provided through Apple’s Foundation Models framework. The app does not automatically send images, your instructions (prompts), or analysis results to our servers or external AI services, and does not provide this content to advertising SDKs.</p>
+<p>Elucidator analyzes camera images with an AI model on your device and describes the scene in text or speech. It uses the on-device model provided through Apple’s Foundation Models framework. Unless you enable external integrations, the app does not send images, your instructions (prompts), or analysis results outside your device. This content is not provided to advertising SDKs.</p>
 <p>On-device processing refers to image analysis. Advertising, purchases, contact forms, and system-managed downloads or updates of models and related resources may require an internet connection.</p>
+
+<p>External integrations (GET API and curl notifications) are off by default. When enabled, they share analysis results, images, prompts, timestamps, and device status over your local network or send them to an endpoint you specify, depending on your settings. You can stop sharing or sending by turning these features off. Please check with the recipient’s administrator about how received data is used, retained, and deleted.</p>
 
 <h2>2. Camera and Speech Output</h2>
 <p>The app uses the camera to display and analyze images. You can change camera permission in iOS Settings. Analysis results are read aloud using iOS text-to-speech features. The app does not record ambient audio through the microphone for this feature.</p>
@@ -27,7 +29,7 @@
 <p>To display recent analysis history, the app temporarily keeps result text, a reduced-size copy of the analyzed image, the capture time, and the prompt used on your device. History is limited to recent entries and is not saved for restoration after the app restarts. The app does not save history images to your photo library.</p>
 
 <h2>4. Data Stored on Your Device</h2>
-<p>The app stores camera, display, language, and speech settings; prompts and prompt history; usage counts; reward expiration times; and similar information on your device. This data is used to restore settings, reuse prompts, and manage usage limits and feature access. Stored prompts are handled separately from the analysis history described in Section 3.</p>
+<p>The app stores camera, display, language, and speech settings; prompts and prompt history; usage counts; reward expiration times; and similar information on your device. This data is used to restore settings, reuse prompts, and manage usage limits and feature access. Stored prompts are handled separately from the analysis history described in Section 3. Commands for curl notifications may contain authentication information and are stored in the Keychain on your device.</p>
 <p>Prompts and camera images may contain personal information that you enter or capture.</p>
 
 <h2>5. Purchases</h2>
@@ -43,7 +45,7 @@
 <p>Data handling by operating system features, such as iOS diagnostic data sharing, is governed by your device settings and Apple’s policies.</p>
 
 <h2>8. Retention and Deletion</h2>
-<p>You can clear analysis history in the app. Older entries are removed when the history limit is reached, and history is not restored after the app restarts. You can delete locally stored app data, including settings and prompts, by deleting the app. Resetting settings does not delete all stored prompts and prompt history.</p>
+<p>You can clear analysis history in the app. Older entries are removed when the history limit is reached, and history is not restored after the app restarts. You can delete settings and prompts by deleting the app. You can delete commands for curl notifications stored in the Keychain by resetting settings. Resetting settings does not delete all stored prompts and prompt history.</p>
 <p>Depending on your device settings, stored app data may be included in iCloud or other backups. This is not a cloud-sync feature provided by Elucidator. You can manage and delete backups through the relevant service’s settings. Advertising and purchase providers retain data under their own policies.</p>
 
 <h2>9. Children</h2>
